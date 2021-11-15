@@ -1,0 +1,38 @@
+﻿<Window x:Class="HomeWork6WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HomeWork6WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="300">
+    <Grid>
+        <GroupBox Header="Сводка погоды" Margin="10" Padding="5" BorderThickness="2"  BorderBrush="#FF02E3F9" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <Label Content="Температура "/>
+                <TextBox  x:Name="temperature" Grid.Row="0" Grid.Column="1" Margin="5" Padding="5" />
+                
+                <Label Content="Направление ветра" Grid.Row="1" Grid.Column="0"/>
+                <TextBox x:Name="windDerection" Grid.Row="1" Grid.Column="1" Margin="3"/>
+
+                <Label Content="Скорость ветра м/с"  Grid.Row="2" Grid.Column="0"/>
+                <TextBox x:Name="windSpeed" Grid.Row="2" Grid.Column="1" Margin="3"  IsReadOnly="True" />
+
+                <Label Content="Наличие осадков"  Grid.Row="3" Grid.Column="0"    />
+                <TextBox x:Name="Precipitation" Grid.Row="3" Grid.Column="1" Margin="3"  IsReadOnly="True" />
+
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
